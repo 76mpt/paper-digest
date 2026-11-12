@@ -9,6 +9,7 @@ for f in user_profile.md project_phd_world_model_prep.md project_revisiting_esc.
          project_fps_pipeline_gap.md feedback_reproduce_before_build.md; do
   cp "$M/$f" context/memory/
 done
+cp /c/Users/USER/.claude/CLAUDE.md context/research_rules.md
 for f in phd_direction_memo.md phd_event_pose_memo.md phd_world_model_roadmap.md hori_research_memo.md; do
   cp "$D/$f" context/
 done
