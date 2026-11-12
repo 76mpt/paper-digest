@@ -9,3 +9,4 @@
 
 ## 最近的日報
 <!-- DIGEST-INDEX -->
+- [2026-11-12](digests/2026/2026-11-12.md)：OnlyAct 從 V-JEPA 2 抽 latent action；記憶型 VLA 在計數任務上把時間當進度（phantom progress）。
