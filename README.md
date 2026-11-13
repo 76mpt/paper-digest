@@ -9,5 +9,5 @@
 
 ## 最近的日報
 <!-- DIGEST-INDEX -->
-- [2026-11-13](digests/2026/2026-11-13.md)：arXiv 自 11-11 後無新公布，今天沒有新論文。
+- [2026-11-13](digests/2026/2026-11-13.md)：V-JEPA 2 的 predictor 幾乎不比「複製現在」好（persistence 對照）；RSSM 想像 rollout 隨步數丟失任務訊號而 ensemble 察覺不到。
 - [2026-11-12](digests/2026/2026-11-12.md)：OnlyAct 從 V-JEPA 2 抽 latent action；記憶型 VLA 在計數任務上把時間當進度（phantom progress）。
