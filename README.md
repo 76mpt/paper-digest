@@ -9,5 +9,6 @@
 
 ## 最近的日報
 <!-- DIGEST-INDEX -->
+- [2026-11-14](digests/2026/2026-11-14.md)：同一批（Fri 13 Nov）的第二梯隊：CGEM 用 critic 記「改變成功機率的事件」解 decision aliasing（週期任務的進度問題）；Bind-WAM 只在不確定時才讓 WAM 想像未來。
 - [2026-11-13](digests/2026/2026-11-13.md)：V-JEPA 2 的 predictor 幾乎不比「複製現在」好（persistence 對照）；RSSM 想像 rollout 隨步數丟失任務訊號而 ensemble 察覺不到。
 - [2026-11-12](digests/2026/2026-11-12.md)：OnlyAct 從 V-JEPA 2 抽 latent action；記憶型 VLA 在計數任務上把時間當進度（phantom progress）。
