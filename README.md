@@ -4,6 +4,7 @@
 
 - `digests/YYYY/YYYY-MM-DD.md`：每日日報
 - `context/`：研究方向備忘錄與 memory 快照（從主力電腦用 `sync_context.sh` 同步，請勿在別處手動修改）
+- `notes/`：值得單獨記下的論文筆記（讀全文，含和我方向的關係與待驗證假說），索引在 `notes/README.md`
 - `seen_ids.txt`：已列過的 arXiv ID
 - `SETUP.md`：設定說明（另一台電腦怎麼用、同步方式、待處理事項）
 
