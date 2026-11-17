@@ -6,6 +6,10 @@
 
 <!-- TRENDS-INDEX -->
 
+## 2026-11-17（[日報](../digests/2026/2026-11-17.md)）
+- **最值得讀**：[LASR](https://arxiv.org/abs/2611.17775)（latent action 讓預測變好不代表編碼了動作，可能只是狀態、進度或任務身分的捷徑；提出有正負對照的離線指標，直接關係到 A 版「latent action 線性探針」的評估寫法）；[WATO](https://arxiv.org/abs/2611.17626)（trajectory optimization 只在訓練時用，部署時 joint WAM 生成加排序，作者自報比 CEM 快 11.5 倍）。
+- **趨勢**：延續 11-13「世界模型評估要有對照組」，評估對象從 rollout 擴展到 latent action 本身；LASR 把「進度」列為要排除的捷徑，呼應 11-12 的 phantom progress（但對週期任務，進度和「第幾下」本來就綁在一起，要小心）。延續 11-14 的降低 WAM 推論成本（WATO、Latent Goal Costs 都是把成本移到訓練或小 adapter）。另一條小線：從軌跡順序學進度/目標成本（Latent Goal Costs、BAL 的時間順序自監督）。
+
 ## 2026-11-14（[日報](../digests/2026/2026-11-14.md)，arXiv 標示日 11-13 的第二梯隊）
 - **最值得讀**：[CGEM](https://arxiv.org/abs/2611.16386)（同一個觀測下要做不同動作，取決於任務進度：這正是週期任務「現在第幾下」的問題，計數器可以當這種 event memory；筆記見 [2611.16386-cgem.md](2611.16386-cgem.md)）；[Bind-WAM](https://arxiv.org/abs/2611.15368)（World Action Model 不必每步都想像未來，只在不確定時才呼叫，直接關係到即時性）。
 - **趨勢**：「什麼時候才需要世界模型想像」與「用便宜的 verifier 或局部模型取代昂貴 rollout」開始出現，都是降低 WAM 延遲的路線（Bind-WAM、A²WM、HDH）。
