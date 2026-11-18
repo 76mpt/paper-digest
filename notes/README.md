@@ -14,4 +14,5 @@
 <!-- NOTES-INDEX -->
 | 日期 | 論文 | 一句話 | 標籤 |
 |---|---|---|---|
+| 2026-11-18 | [LASR：latent action 的動作支持指標](2611.17775-lasr.md) | 預測增益不等於編碼了動作，要扣掉狀態與進度捷徑；和我們 ESC exemplar「有效但不是 content-specific」是同一個評估判斷 | 評估方法論、latent action、對照組、swap probe |
 | 2026-11-16 | [CGEM：Critic-Gated Event Memory](2611.16386-cgem.md) | 只記「讓成功機率跳一下」的事件；玩具環境本身就是要數重複造訪的計數任務 | 記憶、進度、計數器當 reward、decision aliasing |
