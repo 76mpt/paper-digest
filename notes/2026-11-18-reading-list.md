@@ -2,21 +2,21 @@
 
 - 來源日報：[digests/2026/2026-11-18.md](../digests/2026/2026-11-18.md)（arXiv 標示日 2026-11-17）
 - 這份是**只讀過摘要**的整理，還不是單篇深讀筆記；數字都是作者自報。要深讀時再照 [`_template.md`](_template.md) 各開一份 `<arXiv ID>-<短名>.md`。
-- **優先級規則（user 2026-11-18，已寫進每日日報的排程 prompt）**：一線會議／期刊（CVPR、ICCV、ECCV、NeurIPS、ICLR、ICML、CoRL、RSS、TPAMI、IJCV、T-RO、IJRR 等）**連同它們的正式 workshop**，以及二線以上的會議／期刊本身（ICRA、IROS、AAAI、WACV、BMVC、ACCV、RA-L、TIP、TVCG 等），已接受或寫明投稿中的論文，優先級都往上調。
+- **Venue 規則（user 2026-11-18，已寫進每日日報的排程 prompt）**：venue 只讓論文比較容易被列入，不加星；星數仍然只代表相關度。排序加分：一線會議／期刊、它們的正式 workshop，以及二線會議／期刊本身 +0.75；二線會議的 workshop +0.5。已接受的一線論文（含其 workshop）經過審查，引用它們的數字時可以少加保留。
 
 ## 會議／期刊查核（2026-11-18）
-| 論文 | 查到的 venue | 依據 | 是否升級 |
+| 論文 | 查到的 venue | 依據 | venue 加分 |
 |---|---|---|---|
-| The Flip Test (2611.19822) | 沒寫 | arXiv comments 只寫 project page；專案頁 flip-test.github.io 這次連不到，**待查** | 否（待查） |
-| The Sense Paradigm (2611.19796) | 沒寫 | arXiv comments 只寫「11 pages, 4 figures, 4 tables」，也沒有 code 連結 | 否 |
-| VAE Rhythm (2611.21114) | 沒寫 | arXiv comments 只寫頁數；專案頁 showlab.github.io/vae-rhythm 連不到，**待查** | 否（待查） |
-| Robotic Reward Models (2611.20741) | 沒寫 | 專案頁連不到，**待查** | 否（待查） |
-| PointWM (2611.20090) | 沒寫 | GitHub README 沒寫 venue | 否 |
-| Cache or Denoise Less? (2611.19709) | CoRL 2026 **Workshop**（EEAI，honorable mention） | arXiv comments 和 GitHub README | **是**（一線會議的 workshop）→ 升到主讀 |
-| MoViC (2611.19998) | 沒寫 | arXiv comments 只寫頁數；專案頁連不到，**待查** | 否（待查） |
+| The Flip Test (2611.19822) | 沒寫 | arXiv comments 只寫 project page；專案頁 flip-test.github.io 這次連不到，**待查** | 無（待查） |
+| The Sense Paradigm (2611.19796) | 沒寫 | arXiv comments 只寫「11 pages, 4 figures, 4 tables」，也沒有 code 連結 | 無 |
+| VAE Rhythm (2611.21114) | 沒寫 | arXiv comments 只寫頁數；專案頁 showlab.github.io/vae-rhythm 連不到，**待查** | 無（待查） |
+| Robotic Reward Models (2611.20741) | 沒寫 | 專案頁連不到，**待查** | 無（待查） |
+| PointWM (2611.20090) | 沒寫 | GitHub README 沒寫 venue | 無 |
+| Cache or Denoise Less? (2611.19709) | CoRL 2026 **Workshop**（EEAI，honorable mention） | arXiv comments 和 GitHub README | 有（一線會議的 workshop，+0.75）；分級維持 user 指定的輔助 |
+| MoViC (2611.19998) | 沒寫 | arXiv comments 只寫頁數；專案頁連不到，**待查** | 無（待查） |
 
-結論：依更新後的規則，只有 Cache or Denoise Less?（CoRL workshop）升級，從輔助移到主讀；其餘 6 篇沒有查到 venue，優先級不變。github.io 專案頁這次都連不到，四篇的 venue 之後要再補查。
-同一份日報裡**有寫正式 venue** 的只有三篇，都沒在下面的清單裡：[RETR](https://arxiv.org/abs/2611.19358)（event 相機 3D 車道偵測，NeurIPS 2026）、[SGIP](https://arxiv.org/abs/2611.20076)（場景感知人體動作預測，NeurIPS 2026）、[Measuring Coherence in Predictive Models](https://arxiv.org/abs/2611.20325)（NeurIPS 2026）。依這條規則，它們符合升級條件；要不要加進清單由 user 決定（相關度：RETR、SGIP 屬 event／pose 支線，Measuring Coherence 和世界模型只是間接相關）。
+結論：只有 Cache or Denoise Less?（CoRL workshop）有 venue 加分。venue 只影響論文能不能被列入，不改變 user 指定的分級，所以它仍在輔助（放在第一位，標 🏛️）。其餘 6 篇沒有查到 venue。github.io 專案頁這次都連不到，四篇的 venue 之後要再補查。
+同一份日報裡**有寫正式 venue** 的只有三篇，都沒在下面的清單裡：[RETR](https://arxiv.org/abs/2611.19358)（event 相機 3D 車道偵測，NeurIPS 2026）、[SGIP](https://arxiv.org/abs/2611.20076)（場景感知人體動作預測，NeurIPS 2026）、[Measuring Coherence in Predictive Models](https://arxiv.org/abs/2611.20325)（NeurIPS 2026）。它們有 venue 加分（+0.75），但加分只影響能不能被列入；要不要加進清單由 user 決定（相關度：RETR、SGIP 屬 event／pose 支線，Measuring Coherence 和世界模型只是間接相關）。
 
 ---
 
@@ -45,17 +45,13 @@
 3. **反向用法**：如果 1 的掃描能穩定反映週期，它也可以當不用訓練的週期先驗，替 sparse query 的初始化或 budget 分配提供依據。這要先在 RepCount val 上確認，不能直接用在 test。
 - 開始前要確認：sparse 的數字是在修正後的新 tokens 上（見 `context/memory/project_revisiting_esc.md` 2026-11-10 條）。
 
-### 4. [Cache or Denoise Less? Residual Reuse in a Flow-Matching World Action Model](https://arxiv.org/abs/2611.19709) 🏛️ CoRL 2026 EEAI workshop（因 venue 從輔助升上來）
-- 一句話：在 6B 的 Fast-WAM 上，只做 2 步 denoise 的成功率就和 10 步一樣（在 2 個百分點內），一次重新規劃的延遲從 202 ms 降到 92 ms；依作者的成本模型，cache 最多只省 11–14%，cache 太多步時成功率從 95% 掉到 63%。
-- 為什麼讀：B 版「即時」的具體數字和實驗協定（評估 harness、log、checklist 都公開）；「先比最便宜的 baseline」也符合 research_rules。
-- Code：https://github.com/gabhinav001/cache-or-denoise-less
-
 ---
 
 ## 輔助（需要時再讀）
 
 | 論文 | 用途 |
 |---|---|
+| [Cache or Denoise Less?](https://arxiv.org/abs/2611.19709) 🏛️ CoRL 2026 EEAI workshop | B 版即時性：在 Fast-WAM 上，2 步 denoise 的成功率和 10 步差不到 2 個百分點，延遲從 202 ms 降到 92 ms；cache 最多只省 11–14%。附延遲實驗 checklist。Code：https://github.com/gabhinav001/cache-or-denoise-less |
 | [Robotic Reward Models in the Foundation-Model Era](https://arxiv.org/abs/2611.20741) | 計數器當 reward 的佐證：27 個 reward 評估器的 dense credit 追的是時間，不是任務狀態。RRM-Bench-1K 的對照組設計和 RRM-Hub 可以拿來評估計數 reward。五類分法可以當第 8 節「RL 用什麼 reward」的比較框架。 |
 | [Latent World Modeling for Point-Cloud Video Pretraining (PointWM)](https://arxiv.org/abs/2611.20090) | 兩個用處：(1) persistence 洩漏與「複製最後一幀」baseline；(2) 點雲上的無標註 latent action，可以當 event-ESC 點雲原生路線的參考。Code：https://github.com/InitalZ/PointWM |
 | [MoViC](https://arxiv.org/abs/2611.19998) | 單目影片 → humanoid 控制。用頻域動作表示提供時間上下文，用外插把 10 Hz 感知接到 50 Hz 控制、非同步執行。對應 P2（pose 與 proprioception）和 B 版即時性。 |
