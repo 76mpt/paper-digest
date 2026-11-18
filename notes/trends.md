@@ -6,6 +6,10 @@
 
 <!-- TRENDS-INDEX -->
 
+## 2026-11-18（[日報](../digests/2026/2026-11-18.md)）
+- **最值得讀**：[The Flip Test](https://arxiv.org/abs/2611.19822)（三層反事實測試：最小對比、matched control、dense sweep；11 個影片世界模型都低於亂猜，方法可直接移植成週期任務的「第 N 下 vs 第 N+1 下」診斷）；[Robotic Reward Models 綜述 + RRM-Bench-1K](https://arxiv.org/abs/2611.20741)（27 個 reward 評估器的 dense credit 追執行時間而非任務狀態，直接支持事件驅動的計數器 reward）。
+- **趨勢**：延續 11-13／11-17「世界模型評估要有對照組」，今天轉成**成對反事實**設計（Flip Test、ReactBench-AD、SciWorldBench、localized VOE）；延續 11-12 phantom progress 與 11-17 LASR 的「進度捷徑」，今天延伸到 reward model。新出現：WAM 只監督「變化量」而非完整未來（ResWAM、DiffWAM、PointWM 的 persistence 洩漏），和 11-13 的 persistence 對照是同一個現象的訓練端版本。延續 11-14 的 WAM 延遲主題（Cache or Denoise Less：少做幾步就夠，cache 意義不大）。另需注意 VAE Rhythm：生成影片有 VAE 分組造成的週期性假象，量 rollout 週期前要先排除。
+
 ## 2026-11-17（[日報](../digests/2026/2026-11-17.md)）
 - **最值得讀**：[LASR](https://arxiv.org/abs/2611.17775)（latent action 讓預測變好不代表編碼了動作，可能只是狀態、進度或任務身分的捷徑；提出有正負對照的離線指標，直接關係到 A 版「latent action 線性探針」的評估寫法）；[WATO](https://arxiv.org/abs/2611.17626)（trajectory optimization 只在訓練時用，部署時 joint WAM 生成加排序，作者自報比 CEM 快 11.5 倍）。
 - **趨勢**：延續 11-13「世界模型評估要有對照組」，評估對象從 rollout 擴展到 latent action 本身；LASR 把「進度」列為要排除的捷徑，呼應 11-12 的 phantom progress（但對週期任務，進度和「第幾下」本來就綁在一起，要小心）。延續 11-14 的降低 WAM 推論成本（WATO、Latent Goal Costs 都是把成本移到訓練或小 adapter）。另一條小線：從軌跡順序學進度/目標成本（Latent Goal Costs、BAL 的時間順序自監督）。

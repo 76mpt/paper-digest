@@ -10,6 +10,7 @@
 
 ## 最近的日報
 <!-- DIGEST-INDEX -->
+- [2026-11-18](digests/2026/2026-11-18.md)：Flip Test 顯示 11 個影片世界模型在「差幾毫米未來就翻轉」的反事實對上低於亂猜；RRM 綜述 + RRM-Bench-1K 發現 reward model 的 dense credit 追時間而非任務狀態。
 - [2026-11-17](digests/2026/2026-11-17.md)：LASR 檢查 latent action 是否真的編碼動作而非狀態/進度捷徑（含正負對照）；WATO 讓 joint WAM 部署比 CEM 快 11.5 倍。
 - [2026-11-14](digests/2026/2026-11-14.md)：同一批（Fri 13 Nov）的第二梯隊：CGEM 用 critic 記「改變成功機率的事件」解 decision aliasing（週期任務的進度問題）；Bind-WAM 只在不確定時才讓 WAM 想像未來。
 - [2026-11-13](digests/2026/2026-11-13.md)：V-JEPA 2 的 predictor 幾乎不比「複製現在」好（persistence 對照）；RSSM 想像 rollout 隨步數丟失任務訊號而 ensemble 察覺不到。
