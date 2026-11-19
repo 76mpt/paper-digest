@@ -6,6 +6,10 @@
 
 <!-- TRENDS-INDEX -->
 
+## 2026-11-19（[日報](../digests/2026/2026-11-19.md)）
+- **最值得讀**：[Auditing RWM on ANYmal D](https://arxiv.org/abs/2611.23118)（逐位元重建 learned simulator 後預先登記測試：one-step 準確度誤判設計、ensemble 1σ 只覆蓋 4.6%、預測更準的 simulator 有 13/18 訓出失敗 policy；這是先導論文方法論的範本，也是競爭）；[Every Camera Grows Up](https://arxiv.org/abs/2611.21782)（6 個互動影片世界模型 rollout 時相機高度被以人為中心的資料先驗拉回人眼高度，「rollout 往常見先驗回歸」的設計可以移植到週期頻率）。
+- **趨勢**：延續 11-13／11-17／11-18「世界模型評估要對準 rollout 與決策、要有對照組」，今天再補兩篇：RWM 稽核、CURE（畫質無法分辨好決策）。新出現：用關節或結構狀態修正 rollout 漂移（JointGV，測在 Cheetah 和 Walker 的週期步態上），以及運動學樹當 VA 介面（BSP），兩者都逼近我的「動作結構先驗」論點，要盯。延續 11-18 的 VAE 週期假象（Rhythm of Generated Video：bitstream 的 4／8 幀脈衝），量 rollout 週期前必須先排除。延續 11-14 的 WAM 延遲主題（APM 少步蒸餾、AR-WAM single-pass）。pose 當 WAM 動作介面又一個弱結果（EgoHandWAM），支持 pose 當先驗或量尺的定位。
+
 ## 2026-11-18（[日報](../digests/2026/2026-11-18.md)）
 - **最值得讀**：[The Flip Test](https://arxiv.org/abs/2611.19822)（三層反事實測試：最小對比、matched control、dense sweep；11 個影片世界模型都低於亂猜，方法可直接移植成週期任務的「第 N 下 vs 第 N+1 下」診斷）；[Robotic Reward Models 綜述 + RRM-Bench-1K](https://arxiv.org/abs/2611.20741)（27 個 reward 評估器的 dense credit 追執行時間而非任務狀態，直接支持事件驅動的計數器 reward）。
 - **趨勢**：延續 11-13／11-17「世界模型評估要有對照組」，今天轉成**成對反事實**設計（Flip Test、ReactBench-AD、SciWorldBench、localized VOE）；延續 11-12 phantom progress 與 11-17 LASR 的「進度捷徑」，今天延伸到 reward model。新出現：WAM 只監督「變化量」而非完整未來（ResWAM、DiffWAM、PointWM 的 persistence 洩漏），和 11-13 的 persistence 對照是同一個現象的訓練端版本。延續 11-14 的 WAM 延遲主題（Cache or Denoise Less：少做幾步就夠，cache 意義不大）。另需注意 VAE Rhythm：生成影片有 VAE 分組造成的週期性假象，量 rollout 週期前要先排除。
