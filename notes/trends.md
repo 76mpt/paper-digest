@@ -6,6 +6,10 @@
 
 <!-- TRENDS-INDEX -->
 
+## 2026-11-21（[日報](../digests/2026/2026-11-21.md)）
+- **最值得讀**：[O²LaF](https://arxiv.org/abs/2611.26617)（inverse 和 forward dynamics 都從同一個預訓練 video DiT 初始化，從無標籤影片學 latent action，也能換 V-JEPA 2 當先驗；和 11-12 OnlyAct 同向，挑戰 A 版「從零訓練 latent action」的路線）；[Physical Laws without Physics Loss?](https://arxiv.org/abs/2611.25626)（用週期激振的受迫響應測影片世界模型是否學到共振與非線性 softening，和先導論文的週期量尺很接近，🚩）。
+- **趨勢**：延續 11-13～11-20「世界模型評估要有對照組」，今天轉到 planner 失敗歸因：Search or Scoring（同一 cost 在真實結果 AUROC 0.94、在預測上 0.54）、Stuck in Place（JEPA planner ≥96% 失敗是物體不動但模型預測有進展，延續 11-12 phantom progress 到 planning 端）。延續 11-20 的「世界模型是否真的用到動作」，今天出現訓練端解法（AFFECT 對齊動作擾動的反應分布，世界模型內外成功率相關 0.47→0.79）。延續 11-13 persistence 主題：Kernel Physics-IQ 指出單一參考比較會獎勵「生成結果變化變少、甚至停住」。延續 11-20 的「預訓練影片模型當 latent action 先驗」（O²LaF；11-20 DiWALI 則是從零學）。空間端兩篇都支持「動態放在 3D／結構空間預測」（Point Dynamics proxy、MoRE）。無語言即時 VA 在自駕出現一例（BADAS-3.0，1B、<50 ms），但不是世界模型。
+
 ## 2026-11-20（[日報](../digests/2026/2026-11-20.md)）
 - **最值得讀**：[DiWALI](https://arxiv.org/abs/2611.24836)（inverse dynamics 從人和機器人 play 推 latent action、訓世界模型、在想像中 RL 改進 diffusion policy；是合體版少了動作先驗、exemplar 和計數器的版本，主力論文要正面區分）；[StrideWorld](https://arxiv.org/abs/2611.24408)（用模型自己前幾步量出的 stride 當評估前就固定的參考，檢查後續步驟；和「用前幾下週期檢查後續 rollout」同型，🚩）。
 - **趨勢**：延續 11-13～11-19「世界模型評估要有對照組」，今天新增兩種做法：action intervention 加無動作輸入的對照（Does the Action Matter，呼應 11-17 LASR），以及用 siblings 校正結果頻率（SibPO）。延續 11-19 RWM 稽核的「one-step 好不代表 rollout 好」（Reconstruction vs. Prediction：AE 的 one-step 較好，V-JEPA 的 rollout 誤差較小）。新出現：凍結 DINO／V-JEPA 特徵距離幾乎不追蹤任務進度（DOCK，rank corr ≤ 0.11），用特徵差當週期量尺前要先驗證。延續 11-14／11-19 的延遲與語言分層主題（SWIFT 慢世界快動作的非同步架構；DRIFT 拿掉 LM 不掉分）。pose 端：手工 keypoint 統計打贏自監督行為 encoder，支持 Track B 關節角度 baseline。

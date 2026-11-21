@@ -10,6 +10,7 @@
 
 ## 最近的日報
 <!-- DIGEST-INDEX -->
+- [2026-11-21](digests/2026/2026-11-21.md)：O²LaF 用同一個預訓練 video DiT 同時當 inverse／forward dynamics 先驗學 latent action；Forced Response 用週期激振測影片世界模型的共振與非線性響應 🚩；JEPA planner 96% 失敗是「物體不動、模型預測有進展」。
 - [2026-11-20](digests/2026/2026-11-20.md)：DiWALI 從人與機器人 play 影片學 latent action 世界模型並在想像中 RL（合體版的直接競爭）；StrideWorld 用模型自己前幾步的 stride 當固定參考檢查長程動作一致性。
 - [2026-11-19](digests/2026/2026-11-19.md)：RWM（ANYmal D）learned simulator 稽核：one-step 準確度誤判設計選擇、ensemble 不確定性 1σ 只覆蓋 4.6%；6 個互動影片世界模型 rollout 時相機高度被拉回人眼高度。
 - [2026-11-18](digests/2026/2026-11-18.md)：Flip Test 顯示 11 個影片世界模型在「差幾毫米未來就翻轉」的反事實對上低於亂猜；RRM 綜述 + RRM-Bench-1K 發現 reward model 的 dense credit 追時間而非任務狀態。
