@@ -6,6 +6,10 @@
 
 <!-- TRENDS-INDEX -->
 
+## 2026-11-24（[日報](../digests/2026/2026-11-24.md)）
+- **最值得讀**：[EgoLAM](https://arxiv.org/abs/2611.27290)（用實測手腕運動監督 latent action 碼、相機運動另給 forward model；等於先驗 (1)「碼回歸身體運動」的手部版，差異只剩影片估計 pose 和週期先驗，🚩）；[FlowScope](https://arxiv.org/abs/2611.26865)（無標籤立體影片預測公制 3D scene flow 預訓練 ACT，受控比較中 kinematics、2D tracks、scale-free 3D 都較弱，回答「動作預訓練該在 2D 還是 3D」）。
+- **趨勢**：新出現且一次三篇：**動作表徵錨定在幾何或身體運動上**（EgoLAM 手腕、Ego4Gen 4D 點雲與 scene flow 並宣稱 OOD 勝過 latent action、FlowScope 公制 3D flow；另有 Mind World Models 用 EEG），延續並強化 11-19 JointGV／BSP 的結構先驗線，我的先驗 (1) 空位在縮小，差異要落在「影片估計的全身關節」和「重複動作對應重複碼」。延續 11-21 planner 失敗歸因：Round-Trip Check 顯示 CEM 越優化越像在找世界模型的對抗樣本；延續 11-19 RWM 稽核的「learned simulator 的訊號要驗證」，今天是 RL 梯度可信度（Trust What Repeats：梯度越大越不在模擬器兌現）。延續 11-14／11-18 的 WAM 延遲主題（ReActWAM、Trailblazer-F），RoboDyna 補上「延遲翻轉個別 episode 但平均幾乎不變」。另有 categorical 世界模型 rollout validity 較好的受控證據，支持 VQ 路線。
+
 ## 2026-11-21（[日報](../digests/2026/2026-11-21.md)）
 - **最值得讀**：[O²LaF](https://arxiv.org/abs/2611.26617)（inverse 和 forward dynamics 都從同一個預訓練 video DiT 初始化，從無標籤影片學 latent action，也能換 V-JEPA 2 當先驗；和 11-12 OnlyAct 同向，挑戰 A 版「從零訓練 latent action」的路線）；[Physical Laws without Physics Loss?](https://arxiv.org/abs/2611.25626)（用週期激振的受迫響應測影片世界模型是否學到共振與非線性 softening，和先導論文的週期量尺很接近，🚩）。
 - **趨勢**：延續 11-13～11-20「世界模型評估要有對照組」，今天轉到 planner 失敗歸因：Search or Scoring（同一 cost 在真實結果 AUROC 0.94、在預測上 0.54）、Stuck in Place（JEPA planner ≥96% 失敗是物體不動但模型預測有進展，延續 11-12 phantom progress 到 planning 端）。延續 11-20 的「世界模型是否真的用到動作」，今天出現訓練端解法（AFFECT 對齊動作擾動的反應分布，世界模型內外成功率相關 0.47→0.79）。延續 11-13 persistence 主題：Kernel Physics-IQ 指出單一參考比較會獎勵「生成結果變化變少、甚至停住」。延續 11-20 的「預訓練影片模型當 latent action 先驗」（O²LaF；11-20 DiWALI 則是從零學）。空間端兩篇都支持「動態放在 3D／結構空間預測」（Point Dynamics proxy、MoRE）。無語言即時 VA 在自駕出現一例（BADAS-3.0，1B、<50 ms），但不是世界模型。

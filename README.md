@@ -10,6 +10,7 @@
 
 ## 最近的日報
 <!-- DIGEST-INDEX -->
+- [2026-11-24](digests/2026/2026-11-24.md)：EgoLAM 用實測手腕運動監督 latent action、相機運動另給 forward model 🚩；FlowScope 受控比較顯示公制 3D scene flow 預訓練勝過 2D tracks 與 scale-free 3D；Round-Trip Check 發現 CEM 越優化越會丟掉已解出的問題。
 - [2026-11-21](digests/2026/2026-11-21.md)：O²LaF 用同一個預訓練 video DiT 同時當 inverse／forward dynamics 先驗學 latent action；Forced Response 用週期激振測影片世界模型的共振與非線性響應 🚩；JEPA planner 96% 失敗是「物體不動、模型預測有進展」。
 - [2026-11-20](digests/2026/2026-11-20.md)：DiWALI 從人與機器人 play 影片學 latent action 世界模型並在想像中 RL（合體版的直接競爭）；StrideWorld 用模型自己前幾步的 stride 當固定參考檢查長程動作一致性。
 - [2026-11-19](digests/2026/2026-11-19.md)：RWM（ANYmal D）learned simulator 稽核：one-step 準確度誤判設計選擇、ensemble 不確定性 1σ 只覆蓋 4.6%；6 個互動影片世界模型 rollout 時相機高度被拉回人眼高度。
