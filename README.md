@@ -10,6 +10,7 @@
 
 ## 最近的日報
 <!-- DIGEST-INDEX -->
+- [2026-11-26](digests/2026/2026-11-26.md)：Agent-State LAM 先學代理人物理狀態再推 latent action（P2 的同動機對手，有 code）；Any2Act 用單一示範（含人體影片）指定沒看過的任務並追蹤示範進度 🚩；SimPWM 凍結模擬物體測影片世界模型是否真的跟著條件走。
 - [2026-11-25](digests/2026/2026-11-25.md)：DexLatentWorld 在點雲上從人手示範學跨 embodiment 的 3D latent action 🚩；Entangle 用一段人體影片當 context 指定任務的 WAM 🚩；DriveOddsBench 預先登記檢驗 11 個駕駛世界模型，全部低估不確定性。
 - [2026-11-24](digests/2026/2026-11-24.md)：EgoLAM 用實測手腕運動監督 latent action、相機運動另給 forward model 🚩；FlowScope 受控比較顯示公制 3D scene flow 預訓練勝過 2D tracks 與 scale-free 3D；Round-Trip Check 發現 CEM 越優化越會丟掉已解出的問題。
 - [2026-11-21](digests/2026/2026-11-21.md)：O²LaF 用同一個預訓練 video DiT 同時當 inverse／forward dynamics 先驗學 latent action；Forced Response 用週期激振測影片世界模型的共振與非線性響應 🚩；JEPA planner 96% 失敗是「物體不動、模型預測有進展」。

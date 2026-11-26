@@ -6,6 +6,10 @@
 
 <!-- TRENDS-INDEX -->
 
+## 2026-11-26（[日報](../digests/2026/2026-11-26.md)）
+- **最值得讀**：[Agent-State LAM](https://arxiv.org/abs/2611.32017)（latent action 會被背景與固定外觀污染，先學只留代理人物理狀態的表徵再推 latent action；和 P2 `z = [z_pose | z_res]` 同動機，差在它自監督學狀態、我用關節角度，有 code 可當 baseline）；[Any2Act](https://arxiv.org/abs/2611.32353)（單一示範含人體影片指定沒看過的任務，加不需訓練的示範進度 tracker；「exemplar 指定做什麼」加「進度判斷」被做了一部分，只差次數，週期任務會讓 tracker 遇到 aliasing，🚩）。
+- **趨勢**：延續 11-24／11-25「動作表徵要錨在代理人狀態或結構上」，今天是學出來的結構（Agent-State LAM 的 agent state、RELACT 的關係表徵、FactorWorld 的代理人／外部動態分離），P2 的差異要落在「外部可驗證的關節狀態」和週期先驗。延續 11-20／11-21／11-25「世界模型是否真的用到條件」：SimPWM 凍結模擬物體（LTX-2.3 從手臂動作推斷結果，另一種捷徑）、ReCast 指出 occupancy 世界模型每場景只有一條軌跡所以學到場景與軌跡的相關性、CIA 用對比辨識動作取代 inverse 回歸。延續 11-25 Entangle 的示範指定任務：Any2Act、G0.7 影片條件化 ICL，空位持續縮小。延續 11-14 WAM 延遲主題且數字明顯下降：FoveaWAM 15 ms、LeanWAM 25 ms、G0.7 60 ms，FoveaWAM 的 OnTimeBench 和 Roboclock 都改成「推論時場景照走」的評估，延續 11-24 RoboDyna。延續 11-13 persistence 對照：SPAR 用重複自身幀的靜態片段當內容匹配參考。延續 11-21／11-24 planner 失敗歸因：CriticJEPA 指出世界模型適合挑選而非梯度最佳化。pose 端：影片模型的動作已被用 3D 骨架評估（Video Models are Excellent Motion Models），但沒有週期與次數，P1 空位還在。
+
 ## 2026-11-25（[日報](../digests/2026/2026-11-25.md)）
 - **最值得讀**：[DexLatentWorld](https://arxiv.org/abs/2611.30907)（從重定向人手示範的點雲學跨 embodiment 的 3D latent action，並直接拿 latent action 空間做 MPC；P2 在 3D 側最直接的對手，差異在影片估計的身體關節與週期先驗，🚩）；[Entangle](https://arxiv.org/abs/2611.28732)（一段人體影片當 context 指定任務的 WAM，摘要中沒有語言，用 intra-task 對比目標防止任務身分捷徑；「exemplar 指定做什麼」的空位被占一部分，剩下「計數器判斷做完沒」，🚩）。
 - **趨勢**：延續 11-24 的「動作表徵錨在幾何或身體運動」（DexLatentWorld 3D 點雲、ζ₀ 預測實測關節軌跡、MotionPort 依運動相似度組織身體運動 latent）。延續 11-12 OnlyAct／11-21 O²LaF：Native LAM 是第三篇「預訓練影片模型本身就是 latent action 模型」，A 版從零訓的理由要寫清楚。延續 11-19 RWM 稽核與 Rhythm 的 VAE 對照：DriveOddsBench 預先登記，真實未來也先過 autoencoder 再量。延續 11-20／11-21「世界模型有沒有用到動作」：Fork-JEPA 證明行為資料下動作響應不可辨識。延續 11-21／11-24 planner 失敗歸因：同狀態排序才是關鍵（Detecting Is Not Choosing、DAS、MotionPort）。新出現：policy 回歸示範平均速度（SWEEP-Bench），和 11-19 相機高度回歸同型，對週期任務即「頻率被拉回訓練平均」，可直接當先導假說。persistence 有一個反向例子：4D occupancy 世界模型輸在「記不住不變的部分」（PersistWorld），和 11-13 的 persistence 虛高要分開看。延續 11-14 的 WAM 延遲主題（SANA-Robot 30 Hz、VITA-WAM、DelayOPSD、JEPA-Tuner）。
