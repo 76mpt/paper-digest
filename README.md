@@ -10,6 +10,7 @@
 
 ## 最近的日報
 <!-- DIGEST-INDEX -->
+- [2026-11-28](digests/2026/2026-11-28.md)：目標日 Fri, 27 Nov 2026 arXiv 沒有公布（感恩節假期），今天沒有新論文。
 - [2026-11-27](digests/2026/2026-11-27.md)：NWM 稽核發現訓練和 rollout 的動作編碼不一致，只修輸入誤差就降 42%；WorldReforge 顯示 5 個機器人世界模型幾乎贏不了「複製第一幀」；CoDiCount 用 codec 運動向量幫 VLM 數重複次數 🚩；CoWM 單一人體示範轉機器人 🚩。
 - [2026-11-26](digests/2026/2026-11-26.md)：Agent-State LAM 先學代理人物理狀態再推 latent action（P2 的同動機對手，有 code）；Any2Act 用單一示範（含人體影片）指定沒看過的任務並追蹤示範進度 🚩；SimPWM 凍結模擬物體測影片世界模型是否真的跟著條件走。
 - [2026-11-25](digests/2026/2026-11-25.md)：DexLatentWorld 在點雲上從人手示範學跨 embodiment 的 3D latent action 🚩；Entangle 用一段人體影片當 context 指定任務的 WAM 🚩；DriveOddsBench 預先登記檢驗 11 個駕駛世界模型，全部低估不確定性。
